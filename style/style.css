@@ -19,12 +19,21 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "bradhitc";
+  src: url("../font/bradhitc.ttf") format("truetype");
+}
+
 :root {
   --main-color-red: #e90909;
   --menu-color: #e90909;
-  --height-general: 100vh;
-  --font-size-screen-320: 3rem;
-  --font-size-screen-768: 5rem;
+  --height-sections: 100vh;
+  --font-general: "bradhitc";
+  --font-size-title-header-mobile: 4rem;
+  --font-size-title-header-tablet: 5rem;
+  --font-size-text-header-mobile: 1.5rem;
+  --width-logo-menu-mobile: 5rem;
+  --width-logo-header-mobile: 70%;
 }
 
 .main-box {
@@ -39,23 +48,24 @@ a {
 .menu {
   display: flex;
   flex-wrap: wrap;
+  height: 5rem;
   position: sticky;
   top: 0;
-  height: 5rem;
+
   background-color: var(--menu-color);
-  border-top: 1px solid black;
+  border-top: 0.5px solid black;
   border-bottom: 1px solid black;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.box-logo-icon {
+.menu__box-logo-icon {
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 100%;
 }
 
-.logo {
+.menu__logo {
   align-self: flex-start;
   margin: auto;
   width: 5rem;
@@ -63,7 +73,7 @@ a {
   margin-left: 0;
 }
 
-.logo img {
+.menu__logo img {
   width: 100%;
   height: auto;
 }
@@ -96,20 +106,20 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  height: var(--height-sections);
 
-  height: var(--height-general);
+  font-family: var(--font-general);
 }
 
 .header__title {
   margin-top: 2rem;
   background-color: yellow;
-  font-size: var(--font-size-screen-320);
+  font-size: var(--font-size-title-header-mobile);
 }
 
 .image__box {
-  margin-top: 3rem;
-  width: 50%;
+  margin-top: 1rem;
+  width: var(--width-logo-header-mobile);
   height: auto;
 }
 
@@ -117,26 +127,31 @@ a {
   width: 100%;
   height: auto;
 }
+
+.header__text {
+  font-size: var(--font-size-text-header-mobile);
+}
+
 /**********************************Section********************/
 
 .section__verano {
   background-color: snow;
-  height: var(--height-general);
+  height: var(--height-sections);
 }
 
 .section__howToUse {
   background-color: tomato;
-  height: var(--height-general);
+  height: var(--height-sections);
 }
 
 .section__devscola {
   background-color: violet;
-  height: var(--height-general);
+  height: var(--height-sections);
 }
 
 .section__doneBy {
   background-color: blue;
-  height: var(--height-general);
+  height: var(--height-sections);
 }
 
 /*****************************************media querie 500***********************************/
@@ -144,7 +159,7 @@ a {
   .header__title {
     margin-top: 2rem;
     background-color: yellow;
-    font-size: var(--font-size-screen-768);
+    font-size: var(--font-size-title-header-tablet);
   }
 }
 
@@ -169,7 +184,7 @@ a {
 
   .menu {
     width: 10%;
-    height: var(--height-general);
+    height: var(--height-sections);
     top: 0;
     position: -webkit-sticky;
     position: sticky;
