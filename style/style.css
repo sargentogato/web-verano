@@ -94,11 +94,20 @@ a {
   text-align: center;
 }
 
-.menu-link {
+.menu__link {
   padding: 2rem 0;
   width: 100%;
   display: block;
   border: 1px solid black;
+}
+
+.menu-visible {
+  display: block;
+  opacity: 0.8;
+}
+
+.menu-hidden {
+  display: none;
 }
 
 /**********************************Header********************/
@@ -117,7 +126,7 @@ a {
   font-size: var(--font-size-title-header-mobile);
 }
 
-.image__box {
+.header__image-box {
   margin-top: 1rem;
   width: var(--width-logo-header-mobile);
   height: auto;
@@ -173,29 +182,39 @@ a {
     background-color: black;
   }
 
-  /**********************************Header********************/
-
-  /**********************************Menu********************/
-
-  .logo,
-  .icon {
-    display: none;
-  }
-
-  .menu {
-    width: 10%;
-    height: var(--height-sections);
-    top: 0;
-    position: -webkit-sticky;
-    position: sticky;
-  }
-
   .info-box {
     width: 100%;
   }
+  /**********************************Header********************/
 
   .header {
     width: 100%;
     height: 100vh;
+  }
+
+  /**********************************Menu********************/
+
+  .menu__box-logo-icon {
+    display: none;
+  }
+
+  .menu__ul {
+    width: 100%;
+    height: var(--height-sections);
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: var(--menu-color);
+    animation: none;
+  }
+
+  .menu-hidden {
+    display: block;
+  }
+
+  .menu__link:focus,
+  .menu a:focus,
+  .menu__link:hover {
+    background-color: yellow;
   }
 }
