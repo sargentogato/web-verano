@@ -34,6 +34,7 @@ a {
   --font-size-text-header-mobile: 1.5rem;
   --width-logo-menu-mobile: 5rem;
   --width-logo-header-mobile: 70%;
+  --paddin-and-margin-for-sections: 6rem;
 }
 
 .main-box {
@@ -142,25 +143,30 @@ a {
 }
 
 /**********************************Section********************/
+.header,
+.section__verano,
+.section__howToUse,
+.section__devscola,
+.section__doneBy {
+  padding-top: var(--paddin-and-margin-for-sections);
+  margin-top: var(--paddin-and-margin-for-sections);
+  height: var(--height-sections);
+}
 
 .section__verano {
   background-color: snow;
-  height: var(--height-sections);
 }
 
 .section__howToUse {
   background-color: tomato;
-  height: var(--height-sections);
 }
 
 .section__devscola {
   background-color: violet;
-  height: var(--height-sections);
 }
 
 .section__doneBy {
   background-color: blue;
-  height: var(--height-sections);
 }
 
 /*****************************************media querie 500***********************************/
@@ -216,5 +222,13 @@ a {
   .menu a:focus,
   .menu__link:hover {
     background-color: yellow;
+  }
+  /**********************************Sections********************/
+  .section__verano,
+  .section__howToUse,
+  .section__devscola,
+  .section__doneBy {
+    padding-top: 0;
+    margin-top: 0;
   }
 }
