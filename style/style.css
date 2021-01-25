@@ -27,13 +27,16 @@ a {
 :root {
   --main-color-red: #e90909;
   --menu-color: #e90909;
-  --height-sections: 100vh;
+  --height-header-sections: 100vh;
   --font-general: "bradhitc";
   --font-size-title-header-mobile: 4rem;
   --font-size-title-header-tablet: 5rem;
+  --font-size-title-header-desktop: 8rem;
   --font-size-text-header-mobile: 1.5rem;
+  --font-size-text-header-desktop: 2.5rem;
   --width-logo-menu-mobile: 5rem;
   --width-logo-header-mobile: 70%;
+  --width-logo-header-descktop: 40%;
   --paddin-and-margin-for-sections: 6rem;
 }
 
@@ -45,12 +48,17 @@ a {
   background-color: var(--main-color-red);
 }
 
+.info-box {
+  display: flex;
+  flex-direction: column;
+}
 /**********************************Menu********************/
 .menu {
   display: flex;
   flex-wrap: wrap;
   height: 5rem;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
 
   background-color: var(--menu-color);
@@ -111,19 +119,28 @@ a {
   display: none;
 }
 
-/**********************************Header********************/
+/************************Header - Sections*******************/
+.header,
+.section__verano,
+.section__howToUse,
+.section__devscola,
+.section__doneBy {
+  padding-top: var(--paddin-and-margin-for-sections);
+  height: var(--height-header-sections);
+}
+
+/*****************************Header************************/
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: var(--height-sections);
+  height: var(--height-header-sections);
 
   font-family: var(--font-general);
 }
 
 .header__title {
   margin-top: 2rem;
-  background-color: yellow;
   font-size: var(--font-size-title-header-mobile);
 }
 
@@ -143,15 +160,6 @@ a {
 }
 
 /**********************************Section********************/
-.header,
-.section__verano,
-.section__howToUse,
-.section__devscola,
-.section__doneBy {
-  padding-top: var(--paddin-and-margin-for-sections);
-  margin-top: var(--paddin-and-margin-for-sections);
-  height: var(--height-sections);
-}
 
 .section__verano {
   background-color: snow;
@@ -173,32 +181,31 @@ a {
 @media (min-width: 500px) {
   .header__title {
     margin-top: 2rem;
-    background-color: yellow;
     font-size: var(--font-size-title-header-tablet);
   }
 }
 
 /*****************************************media querie 768***********************************/
 @media (min-width: 768px) {
+  /*******************************main-box********************/
   .main-box {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 100%;
-    background-color: black;
   }
 
-  .info-box {
-    width: 100%;
-  }
-  /**********************************Header********************/
-
-  .header {
-    width: 100%;
+  /****************Menu********************/
+  .menu {
+    display: flex;
+    flex-direction: columnç;
+    position: sticky;
+    width: 10%;
     height: 100vh;
-  }
 
-  /**********************************Menu********************/
+    /* background-color: var(--menu-color); */
+    border-top: unset;
+    border-bottom: unset;
+    box-shadow: unset;
+  }
 
   .menu__box-logo-icon {
     display: none;
@@ -206,29 +213,66 @@ a {
 
   .menu__ul {
     width: 100%;
-    height: var(--height-sections);
-    top: 0;
-    position: -webkit-sticky;
-    position: sticky;
-    background-color: var(--menu-color);
-    animation: none;
+    height: 100vh;
+    background-color: yellow;
+    animation: unset;
   }
 
   .menu-hidden {
     display: block;
   }
-
-  .menu__link:focus,
-  .menu a:focus,
-  .menu__link:hover {
-    background-color: yellow;
+  /*******************************info box********************/
+  .info-box {
+    width: 90%;
   }
-  /**********************************Sections********************/
+
+  /************************Header - Sections*******************/
+  .header,
   .section__verano,
   .section__howToUse,
   .section__devscola,
   .section__doneBy {
-    padding-top: 0;
-    margin-top: 0;
+    padding-top: unset;
+    height: var(--height-header-sections);
+  }
+
+  /*****************Header********************/
+
+  /* .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: var(--height-header-sections);
+  } */
+
+  .header__title {
+    margin-top: unset;
+    font-size: var(--font-size-title-header-desktop);
+  }
+
+  .header__image-box {
+    margin-top: unset;
+    width: var(--width-logo-header-descktop);
+    height: auto;
+  }
+
+  .header__text {
+    font-size: var(--font-size-text-header-desktop);
+  }
+  /*****************Sections********************/
+  .section__verano {
+    background-color: snow;
+  }
+
+  .section__howToUse {
+    background-color: tomato;
+  }
+
+  .section__devscola {
+    background-color: violet;
+  }
+
+  .section__doneBy {
+    background-color: blue;
   }
 }
