@@ -10,13 +10,13 @@
 </head>
 
 <body>
-  <div class="main-box">
+  <div id="mainBox" class="main-box">
     <menu id="menu" class="menu">
       <div class="menu__box-logo-icon">
         <div class="menu__logo">
           <img src="./img/Verano-Logo.png" alt="Verano JS testing Library">
         </div>
-        <svg id="toggleButton" class="ham hamRotate ham1 icon" viewBox="0 0 100 100" width="80"
+        <svg id="toggleButton" class="ham hamRotate ham1 menu__icon" viewBox="0 0 100 100" width="80"
           onclick="this.classList.toggle('active')">
           <path class="line top"
             d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
@@ -27,25 +27,26 @@
       </div>
 
       <ul class="menu__ul menu-hidden">
-        <li class="menu__li"><a href="#" class="menu-link">LINK</a></li>
-        <li class="menu__li"><a href="#" class="menu-link">LINK</a></li>
-        <li class="menu__li"><a href="#" class="menu-link">LINK</a></li>
-        <li class="menu__li"><a href="#" class="menu-link">LINK</a></li>
+        <li class="menu__li"><a href="#header" data-scroll-spy class="menu__link">Home</a></li>
+        <li class="menu__li"><a href="#verano" data-scroll-spy class="menu__link">¿Qué es verano JS?</a></li>
+        <li class="menu__li"><a href="#howToUse" data-scroll-spy class="menu__link">¿Cómo utilizar Verano JS?</a></li>
+        <li class="menu__li"><a href="#devscola" data-scroll-spy class="menu__link">DEVSCOLA</a></li>
+        <li class="menu__li"><a href="#doneBy" data-scroll-spy class="menu__link">Done by</a></li>
       </ul>
     </menu>
 
     <div class="info-box">
       <header id="header" class="header" data-scroll-spy>
         <h1 class="header__title">Verano JS</h1>
-        <div class="image__box">
+        <div class="header__image-box">
           <img class="header__logo" src="./img/Verano-header-logo.png" alt="Verano Libraria de testing">
         </div>
         <p class="header__text">Libraria de testing</p>
       </header>
-      <section id="howToUse" class="section__howToUse" data-scroll-spy="">HOW TO USE</section>
-      <section id="devscola" class="section__devscola" data-scroll-spy="">DEVSCOLA</section>
-      <section id="doneBy" class="section__doneBy" data-scroll-spy="">DONE BY</section>
-      <section id="verano" class="section__verano" data-scroll-spy="">VERANO</section>
+      <section id="verano" class="section__verano" data-scroll-spy>VERANO</section>
+      <section id="howToUse" class="section__howToUse" data-scroll-spy>HOW TO USE</section>
+      <section id="devscola" class="section__devscola" data-scroll-spy>DEVSCOLA</section>
+      <section id="doneBy" class="section__doneBy" data-scroll-spy>DONE BY</section>
     </div>
     <!-- info-box end -->
   </div>
