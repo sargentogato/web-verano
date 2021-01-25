@@ -17,6 +17,7 @@ p {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 @font-face {
@@ -27,7 +28,7 @@ a {
 :root {
   --main-color-red: #e90909;
   --menu-color: #e90909;
-  --height-header-sections: 100vh;
+  --height-header: 100vh;
   --font-general: "bradhitc";
   --font-size-title-header-mobile: 4rem;
   --font-size-title-header-tablet: 5rem;
@@ -45,7 +46,7 @@ a {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: var(--main-color-red);
+  /* background-color: var(--main-color-red); */
 }
 
 .info-box {
@@ -120,13 +121,25 @@ a {
 }
 
 /************************Header - Sections*******************/
-.header,
+/* .header,
 .section__verano,
 .section__howToUse,
 .section__devscola,
 .section__doneBy {
   padding-top: var(--paddin-and-margin-for-sections);
-  height: var(--height-header-sections);
+  height: var(--height-header);
+} */
+.header,
+.section__verano,
+.section__devscola,
+.section__doneBy {
+  height: var(--height-header);
+}
+
+.header,
+.section__howToUse,
+.section__devscola {
+  padding-top: var(--paddin-and-margin-for-sections);
 }
 
 /*****************************Header************************/
@@ -134,9 +147,10 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: var(--height-header-sections);
+  height: var(--height-header);
 
   font-family: var(--font-general);
+  background-color: var(--main-color-red);
 }
 
 .header__title {
@@ -160,21 +174,76 @@ a {
 }
 
 /**********************************Section********************/
-
-.section__verano {
-  background-color: snow;
+.section-box {
+  padding: 0 1rem;
 }
 
-.section__howToUse {
-  background-color: tomato;
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+.section__text {
+  margin-top: 1rem;
+}
+
+.section__verano {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__howToUse-img__items {
+  width: 100%;
+  height: auto;
+}
+
+.section__howToUse-text {
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+
+.section__howToUse-img__items img {
+  width: 100%;
+  height: auto;
 }
 
 .section__devscola {
-  background-color: violet;
+  height: 100%;
+  margin-top: 5rem;
+  background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.34217436974789917) 100%, rgba(0, 212, 255, 1) 100%), url(../img/cova2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-weight: bold;
 }
 
+.section__devscola .section__title,
+.section__devscola .section__text {
+  color: white;
+}
+
+.section__devscola .section-box {
+  padding-bottom: 6rem;
+}
 .section__doneBy {
-  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.master {
+  text-align: center;
+}
+
+.padawans,
+.curro {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.padawans .section__text {
+  margin-top: 0;
 }
 
 /*****************************************media querie 500***********************************/
@@ -233,7 +302,7 @@ a {
   .section__devscola,
   .section__doneBy {
     padding-top: unset;
-    height: var(--height-header-sections);
+    height: var(--height-header);
   }
 
   /*****************Header********************/
