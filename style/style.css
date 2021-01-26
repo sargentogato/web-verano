@@ -20,6 +20,10 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  background-color: rgb(255, 126, 5);
+}
+
 @font-face {
   font-family: "bradhitc";
   src: url("../font/bradhitc.ttf") format("truetype");
@@ -109,10 +113,12 @@ a {
 .menu__li {
   width: 100%;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .menu__link {
+  font-size: 1.2rem;
+  font-weight: bold;
   padding: 2rem 0;
   width: 100%;
   display: block;
