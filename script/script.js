@@ -1,7 +1,6 @@
 const toggleButton = document.getElementById("toggleButton") // SVG
 const menuUl = document.querySelector("ul")
 let itemMenu = document.getElementsByClassName("menu__link")
-const sections = document.querySelectorAll("header[data-scroll-spy], section[data-scroll-spy]")
 
 /*
  * Listening the clicks
